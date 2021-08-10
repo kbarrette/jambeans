@@ -248,7 +248,7 @@ local theme = lush(function()
     -- TSInclude            { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     -- TSKeyword            { };    -- For keywords that don't fall in previous categories.
     -- TSKeywordFunction    { };    -- For keywords used to define a fuction.
-    TSLabel              { Identifier };    -- For labels: `label:` in C and `:label:` in Lua.
+    -- TSLabel              { };    -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod             { };    -- For method calls and definitions.
     -- TSNamespace          { };    -- For identifiers referring to modules and namespaces.
     -- TSNone               { };    -- TODO: docs
@@ -291,6 +291,11 @@ local theme = lush(function()
     StatusLineModeNormal { fg = medium_grey, bg = blue },
     StatusLineModeVisual { fg = medium_grey, bg = purple },
     StatusLineModeInsert { fg = medium_grey, bg = green },
+
+    -- Custom tree-sitter setup for instance variables - the default config
+    -- for ruby gives them the "label" highlight which seems inappropriate
+    -- See init.lua and after/queries/ruby/highlights.scm for config
+    TSVariableInstance { Identifier },
   }
 end)
 
