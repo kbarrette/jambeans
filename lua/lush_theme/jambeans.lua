@@ -94,7 +94,7 @@ local theme = lush(function()
     -- TermCursor   { }, -- cursor in a focused terminal
     -- TermCursorNC { }, -- cursor in an unfocused terminal
     -- ErrorMsg     { }, -- error messages on the command line
-    -- VertSplit    { }, -- the column separating vertically split windows
+    VertSplit    { fg = light_grey, bg = background_grey }, -- the column separating vertically split windows
     -- Folded       { }, -- line used for closed folds
     -- FoldColumn   { }, -- 'foldcolumn'
     SignColumn   { fg = grey, bg = medium_grey }, -- column where |signs| are displayed
@@ -262,7 +262,7 @@ local theme = lush(function()
     -- TSPunctSpecial       { };    -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat             { };    -- For keywords related to loops.
     -- TSString             { };    -- For strings.
-    TSStringRegex        { fg = magenta };    -- For regexes.
+    -- TSStringRegex        { };    -- For regexes.
     -- TSStringEscape       { };    -- For escape characters within a string.
     TSSymbol             { Statement };    -- For identifiers referring to symbols or atoms.
     -- TSType               { };    -- For types.
