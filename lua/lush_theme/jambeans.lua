@@ -281,9 +281,9 @@ local theme = lush(function()
     -- TSURI                { };    -- Any URI like a link or email.
     
     -- For lewis6991/gitsigns.nvim
-    GitSignsChange { fg = blue, bg = SignColumn.bg },
-    GitSignsAdd { fg = light_green, bg = SignColumn.bg },
-    GitSignsDelete { fg = red, bg = SignColumn.bg },
+    GitSignsChange { SignColumn, fg = blue },
+    GitSignsAdd { SignColumn, fg = light_green },
+    GitSignsDelete { SignColumn, fg = red },
 
     -- For my custom status line
     StatusLineBackground { fg = off_white, bg = SignColumn.bg },
