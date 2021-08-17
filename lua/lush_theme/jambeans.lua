@@ -52,14 +52,15 @@ local grey  = hsl(0, 0, 53)
 local light_grey = hsl(0, 0, 78)
 local white = hsl(0, 0, 100)
 local off_white = hsl(60, 31, 87)
-local purple  = hsl(257, 62, 82)
-local magenta = hsl(320, 100, 43)
+-- local purple  = hsl(257, 62, 82)
+-- local magenta = hsl(320, 100, 43)
 local light_blue = hsl(203, 52,71)
 local blue = hsl(219, 33, 63)
 local light_green = hsl(78, 29 ,55)
 local green = hsl(102, 21, 52)
 local yellow = hsl(40, 93, 73)
 local yellow_orange = hsl(33, 100, 70)
+local orange = hsl(36, 80, 50)
 local red = hsl(14, 58, 56)
 local bold_red = hsl(0, 64, 35)
 
@@ -148,7 +149,7 @@ local theme = lush(function()
     Boolean        { fg = red }, --  a boolean constant: TRUE, false
     -- Float          { }, --    a floating point constant: 2.3e10
 
-    Identifier     { fg = purple }, -- (preferred) any variable name
+    Identifier     { fg = orange }, -- (preferred) any variable name
     Function       { fg = yellow }, -- function name (also: methods for classes)
 
     Statement      { fg = blue }, -- (preferred) any statement
@@ -289,7 +290,7 @@ local theme = lush(function()
     StatusLineBackground { fg = off_white, bg = SignColumn.bg },
     StatusLineInfo { fg = off_white, bg = StatusLineBackground.bg.lighten(8) },
     StatusLineModeNormal { fg = medium_grey, bg = blue },
-    StatusLineModeVisual { fg = medium_grey, bg = purple },
+    StatusLineModeVisual { fg = medium_grey, bg = orange },
     StatusLineModeInsert { fg = medium_grey, bg = green },
 
     -- Custom tree-sitter setup for instance variables - the default config
