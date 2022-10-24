@@ -67,7 +67,9 @@ local bold_red = hsl(0, 64, 35)
 -- LSP/Linters mistakenly show `undefined global` errors in the spec, they may
 -- support an annotation like the following. Consult your server documentation.
 ---@diagnostic disable: undefined-global
-local theme = lush(function()
+local theme = lush(function(injected_functions)
+  local sym = injected_functions.sym
+
   return {
     -- The following are the Neovim (as of 0.8.0-dev+100-g371dfb174) highlight
     -- groups, mostly used for styling UI elements.
@@ -312,6 +314,16 @@ local theme = lush(function()
     -- for ruby gives them the "label" highlight which seems inappropriate
     -- See init.lua and after/queries/ruby/highlights.scm for config
     TSVariableInstance { Identifier },
+
+    -- nvim-treesitter changed to new highlight names,
+    -- see: https://github.com/nvim-treesitter/nvim-treesitter/pull/3656
+    -- see: https://github.com/rktjmp/lush.nvim/issues/109
+    sym('@punctuation.delimiter') { TSPunctDelimiter },
+    sym('@punctuation.bracket') { TSPunctBracket },
+    sym('@symbol') { TSSymbol },
+    sym('@variable.builtin') { TSVariableBuiltin },
+    sym('@variable.instance') { TSVariableInstance },
+
   }
 end)
 
