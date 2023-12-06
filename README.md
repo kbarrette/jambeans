@@ -5,7 +5,7 @@ Status: **alpha**
 
 Based on my favorite color scheme, the beautiful [jellybeans](https://github.com/nanotech/jellybeans.vim).
 
-`jambeans` looks basically identical to `jellybeans`, with some minor tweaks to
-things like "TODO" highlighting, git sign column colors, and the like. I've
-also added Tree-sitter highlight groups and a couple of plugin-specific
+`jambeans` looks very much like `jellybeans`, with some minor color tweaks, and
+changes to things like "TODO" highlighting, git sign column colors, etc.
+I've also added Tree-sitter highlight groups and a couple of plugin-specific
 highlights.
