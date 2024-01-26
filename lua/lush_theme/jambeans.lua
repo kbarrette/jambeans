@@ -320,7 +320,7 @@ local theme = lush(function(injected_functions)
     -- see: https://github.com/rktjmp/lush.nvim/issues/109
     sym('@punctuation.delimiter') { TSPunctDelimiter },
     sym('@punctuation.bracket') { TSPunctBracket },
-    sym('@symbol') { TSSymbol },
+    sym('@string.special.symbol') { TSSymbol },
     sym('@variable.builtin') { TSVariableBuiltin },
     sym('@variable.instance') { TSVariableInstance },
 
