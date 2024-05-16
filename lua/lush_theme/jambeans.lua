@@ -56,7 +56,7 @@ local off_white = hsl(60, 31, 87)
 -- local magenta = hsl(320, 100, 43)
 local light_blue = hsl(203, 52,71)
 local blue = hsl(219, 33, 63)
-local light_green = hsl(78, 29 ,55)
+local light_green = hsl(78, 29, 55)
 local green = hsl(102, 21, 52)
 local yellow = hsl(40, 93, 73)
 local yellow_orange = hsl(33, 100, 70)
@@ -109,7 +109,7 @@ local theme = lush(function(injected_functions)
     -- ModeMsg      { }, -- 'showmode' message (e.g., "-- INSERT -- ")
     -- MsgArea      { }, -- Area for messages and cmdline
     -- MsgSeparator { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-    -- MoreMsg      { }, -- |more-prompt|
+    MoreMsg      { fg = green }, -- |more-prompt|
     NonText      { fg = medium_grey }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal       { fg = off_white, bg = background_grey }, -- normal text
     -- NormalFloat  { }, -- Normal text in floating windows.
@@ -150,7 +150,7 @@ local theme = lush(function(injected_functions)
     Comment        { fg = grey, gui = 'italic' }, -- Any comment
 
     Constant       { fg = light_green }, -- (*) any constant
-    -- String         { }, --   A string constant: "this is a string"
+    String         { fg = light_green }, --   A string constant: "this is a string"
     -- Character      { }, --   A character constant: 'c', '\n'
     Number         { fg = red }, --   a number constant: 234, 0xff
     Boolean        { fg = red }, --  a boolean constant: TRUE, false
@@ -323,6 +323,7 @@ local theme = lush(function(injected_functions)
     sym('@string.special.symbol') { TSSymbol },
     sym('@variable.builtin') { TSVariableBuiltin },
     sym('@variable.instance') { TSVariableInstance },
+    sym('@variable') { TSVariableInstance },
 
   }
 end)
