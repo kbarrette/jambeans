@@ -112,7 +112,7 @@ local theme = lush(function(injected_functions)
     MoreMsg      { fg = green }, -- |more-prompt|
     NonText      { fg = medium_grey }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal       { fg = off_white, bg = background_grey }, -- normal text
-    -- NormalFloat  { }, -- Normal text in floating windows.
+    NormalFloat  { fg = white, bg = medium_grey }, -- Normal text in floating windows.
     -- NormalNC     { }, -- normal text in non-current windows
     Pmenu        { fg = white, bg = medium_grey }, -- Popup menu: normal item.
     PmenuSel     { fg = black, bg = light_grey }, -- Popup menu: selected item.
@@ -324,7 +324,6 @@ local theme = lush(function(injected_functions)
     sym('@variable.builtin') { TSVariableBuiltin },
     sym('@variable.instance') { TSVariableInstance },
     sym('@variable') { TSVariableInstance },
-
   }
 end)
 
